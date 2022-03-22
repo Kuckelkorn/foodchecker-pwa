@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/154837199a.js" crossorigin="anonymous"></script>
+    <title>Foodchecker</title>
+  </head>
+  <body>
+    <header>
+      <h1>Foodchecker</h1>
+    </header>
+    <main>
+      <section id="nojs">      
+        <p> Je hebt javascript nodig om van deze applicatie gebruik te maken</p>
+      </section>
+      <section id="initial">
+        <a href="#camera">Start met scannen</a>
+      </section>
+      <section id="camera" class="hidden"></section>
+      <section id="product" class="hidden">
+        <h2>Voedingswaarde</h2>
+        <h2>Allergieen</h2>
+      </section>
+    </main>
+    <footer>
+      <a href="#camera" id="camera"><i class="fa-solid fa-camera fa-4x"></i></a>
+    </footer>
+  </body>
+</html>
