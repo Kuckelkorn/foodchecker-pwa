@@ -16,7 +16,10 @@ The application let's you scan the barcode of a product. It uses the barcode sca
 
 ## Running the app
 
+### Used technology
+
 The application uses the pug rendering engine for displaying the content and express to setup a server.
+Besides that it uses [the barcode detection API](https://developer.mozilla.org/en-US/docs/Web/API/Barcode_Detection_API) and the [OpenFoodfacts API](https://world.openfoodfacts.org/)
 
 ### Installation
 
