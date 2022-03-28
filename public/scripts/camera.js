@@ -9,11 +9,12 @@ const startCamera = async () => {
       video.srcObject = await stream
       await video.play()
 
+      // const barcode = getBarcode(video)
+      const barcode = 737628064502 || 8711400408540
+
       const btn = document.querySelector('#scan')
       btn.addEventListener('click', (e) => {
         e.preventDefault()
-        // const barcode = getBarcode(video)
-        const barcode = 8711400408540 || 737628064502
         location.href = `/product/${barcode}`
         endCamera()
       })
@@ -37,7 +38,7 @@ const getBarcode = async(video) => {
         // window.location.hash = '#' + barcodes[0].rawValue;
         return barcodes[0].rawValue
       } else {
-        console.log('no barcode detected')
+        return 'no barcode detected'
       }
     }, 100)}
 }

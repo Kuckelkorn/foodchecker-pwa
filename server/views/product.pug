@@ -1,1 +1,17 @@
 extends layouts/head.pug
+
+block title
+  Foodchecker 
+
+block main
+  section#info
+    h2 #{product.product_name}
+    h3 #{product.product_generic_name}
+    img(src=product.selected_images.front.display.es)
+  section#voedingswaarde
+    h2 Voedingswaarde
+    p #{product.nutriscore_data}
+  section#allergies
+    h2 Allergieën 
+    p #{product.allergens_hierarchy}
+
