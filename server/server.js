@@ -11,7 +11,7 @@ const app = express()
 
 //Initialise app
 app
-  .use('/static', express.static('./public/static'))
+  .use('/static', express.static('./public'))
   .set('view engine', 'pug')
   .set('views', './server/views')
   .use(bodyParser.urlencoded({ extended: true }))
@@ -19,7 +19,15 @@ app
 
 // Routes
 app
-  .get('/', )
+  .get('/', (req, res) => {
+    res.render('index')
+  })
+  .get('/camera', (req, res) => {
+    res.render('camera')
+  })
+  .get('/product', (req, res) => {
+    res.render('product')
+  })
 
 // Start app
 app.listen(port, () => {
