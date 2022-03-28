@@ -1,3 +1,13 @@
 extends layouts/head.pug
 
+block title
+   Foodchecker 
+
+block main 
+  section#initial 
+    a(href="/camera") Start met scannen
+
+  footer 
+    a#camera(href="/camera")
+      i(class="fa-solid fa-camera fa-4x")
 

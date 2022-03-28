@@ -1,1 +1,14 @@
 extends layouts/head.pug
+
+block title
+  Foodchecker
+
+block script
+  script(src="../../../static/scripts/camera.js" defer type="module")
+
+block main 
+  section#camera
+    form
+      video(autoplay)
+      input(type="text" class="hidden")
+      button#scan Scan
