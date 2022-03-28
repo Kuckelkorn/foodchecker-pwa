@@ -1,8 +1,5 @@
 extends layouts/head.pug
 
-block title
-  Foodchecker 
-
 block main
   section#info
     h2 #{product.product_name}
@@ -14,4 +11,8 @@ block main
   section#allergies
     h2 Allergieën 
     p #{product.allergens_hierarchy}
+
+  footer 
+    a#camera(href="/camera")
+      i(class="fa-solid fa-camera fa-4x")
 

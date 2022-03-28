@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "Foodchecker",
+  "short_name": "Foodchecker",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "An application for scanning foodbarcodes"
+}
