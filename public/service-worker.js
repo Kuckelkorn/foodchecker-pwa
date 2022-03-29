@@ -25,9 +25,9 @@ self.addEventListener('fetch', (e) => {
         else{
           return fetch(e.request)
             .then((res) => res)
-            // Wanneer er geen response kan worden gefetched laat de offline pagina zien // breng verandering aan
+            // Wanneer er geen response kan worden gefetched laat de offline pagina zien vanuit de cache 
+            // breng verandering aan zodat me javascript en css kunnen worden geupdate 
             .catch((err) => {
-              console.log(err)
               return caches.open('core-cache')
                 .then(cache => cache.match('/offline'))
             })
