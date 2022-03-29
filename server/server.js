@@ -22,6 +22,9 @@ app
   .get('/', (req, res) => {
     res.render('index')
   })
+  .get('/offline', (req, res) => {
+    res.render('offline')
+  })
   .get('/camera', (req, res) => {
     res.render('camera')
   })
