@@ -11,7 +11,7 @@ const app = express()
 
 //Initialise app
 app
-  .use('/static', express.static('./public'))
+  .use(express.static('public'))
   .set('view engine', 'pug')
   .set('views', './server/views')
   .use(bodyParser.urlencoded({ extended: true }))
@@ -28,7 +28,7 @@ app
   .get('/camera', (req, res) => {
     res.render('camera')
   })
-  .get('/product/:barcode', async (req, res) => {
+  .get('/:barcode', async (req, res) => {
     const barcode = req.params.barcode
     const result = await fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
     const product = await result.json()

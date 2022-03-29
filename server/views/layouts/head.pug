@@ -3,10 +3,10 @@ head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Foodchecker
-    link(rel="stylesheet", href="../../../static/style.css")
+    link(rel="stylesheet", href="style.css")
     link(rel="preconnect" href="https://fonts.gstatic.com")
     link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet")
-    link(rel="manifest" href="../../../static/manifest.json")
+    link(rel="manifest" href="manifest.json")
 
     script(src="https://kit.fontawesome.com/154837199a.js" crossorigin="anonymous")
     block script
@@ -18,7 +18,7 @@ body
     script.
       if ('serviceWorker' in navigator) {
           window.addEventListener("load", function() {
-              navigator.serviceWorker.register('../../../static/service-worker.js')
+              navigator.serviceWorker.register('service-worker.js')
                   .then(function(registration) {
                       return registration.update();
                   })
