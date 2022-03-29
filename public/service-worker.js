@@ -14,17 +14,18 @@ self.addEventListener('activate', (e) => {
 })
 
 self.addEventListener('fetch', (e) => {
-  console.log(`fetching: ${e.request.url}`)
-
   e.respondWith(
+    // Als de cache match met de request, stuur de cache.
     caches.match(e.request)
       .then(cache => {
         if (cache) {
           return cache
         }
+        // Anders fetch de request en stuur dat als response 
         else{
           return fetch(e.request)
             .then((res) => res)
+            // Wanneer er geen response kan worden gefetched laat de offline pagina zien
             .catch((err) => {
               console.log(err)
               return caches.open('core-cache')
