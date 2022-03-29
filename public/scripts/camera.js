@@ -15,7 +15,7 @@ const startCamera = async () => {
       const btn = document.querySelector('#scan')
       btn.addEventListener('click', (e) => {
         e.preventDefault()
-        location.href = `/${barcode}`
+        location.href = `/product/${barcode}`
         endCamera()
       })
     } catch(err) {

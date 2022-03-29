@@ -28,7 +28,7 @@ app
   .get('/camera', (req, res) => {
     res.render('camera')
   })
-  .get('/:barcode', async (req, res) => {
+  .get('/product/:barcode', async (req, res) => {
     const barcode = req.params.barcode
     const result = await fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
     const product = await result.json()
