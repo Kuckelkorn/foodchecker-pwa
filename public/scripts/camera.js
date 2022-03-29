@@ -11,11 +11,12 @@ const startCamera = async () => {
 
       // const barcode = getBarcode(video)
       const barcode = 737628064502 || 8711400408540
+      const input = document.querySelector('form input')
+      input.type = 'hidden'
+      input.value = barcode;
 
       const btn = document.querySelector('#scan')
-      btn.addEventListener('click', (e) => {
-        e.preventDefault()
-        location.href = `/product/${barcode}`
+      btn.addEventListener('click', () => {
         endCamera()
       })
     } catch(err) {

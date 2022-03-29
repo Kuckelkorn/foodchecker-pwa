@@ -5,6 +5,7 @@ block script
 
 block main 
   section#camera
-    form
+    form#barcode(method="POST" action="/camera")
       video(autoplay)
-      button#scan Scan
+      input#code(type="text" name="barcode")
+      button#scan(type="submit" form="barcode") Scan

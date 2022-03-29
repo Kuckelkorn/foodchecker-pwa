@@ -28,6 +28,10 @@ app
   .get('/camera', (req, res) => {
     res.render('camera')
   })
+  .post('/camera', (req, res) => {
+    const barcode = req.body.barcode
+    res.redirect(`/product/${barcode}`)
+  })
   .get('/product/:barcode', async (req, res) => {
     const barcode = req.params.barcode
     const result = await fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
