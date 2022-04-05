@@ -1,4 +1,4 @@
-const CORE_CACHE = ['/offline', 'style-v2.css', '/', '/camera', 'scripts/camera-v2.js']
+const CORE_CACHE = ['/offline', 'style-v2.css', '/', '/camera', 'scripts/camera-v2.min.js']
 const core_name = 'core-cache-v2'
 
 self.addEventListener('install', (e) => {
