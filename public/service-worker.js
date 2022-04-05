@@ -1,9 +1,10 @@
 const CORE_CACHE = ['/offline', 'style.css', '/', '/camera', 'scripts/camera.js']
+const core_name = 'core-cache-v2'
 
 self.addEventListener('install', (e) => {
   console.log('installed')
   e.waitUntil(
-    caches.open('core-cache')
+    caches.open(`${core_name}`)
       .then(cache => cache.addAll(CORE_CACHE))
       .then(() => self.skipWaiting())
   )
