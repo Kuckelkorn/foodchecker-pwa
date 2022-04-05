@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser'
 import fetch from 'node-fetch'
 import 'dotenv/config'
+import compression from 'compression'
 
 let port = process.env.PORT || 5555
 
@@ -12,9 +13,12 @@ const app = express()
 //Initialise app
 app
   .use(express.static('public'))
+  .use(compression())
+  .use(setCache)
   .set('view engine', 'pug')
   .set('views', './server/views')
   .use(bodyParser.urlencoded({ extended: true }))
+
 
 
 // Routes
@@ -43,3 +47,14 @@ app
 app.listen(port, () => {
   console.log('Server started at port ' + port);
 });
+
+const setCache = (req, res, next) => {
+  const period = 183 * 24 * 60 * 60 
+
+  if (req.method == 'GET') {
+    res.set('Cache-control', `public, max-age=${period}`)
+  } else {
+    res.set('Cache-control', `no-store`)
+  }
+  next()
+}
