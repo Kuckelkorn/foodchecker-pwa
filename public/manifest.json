@@ -7,7 +7,7 @@
     "dir": "ltr",
     "categories": "food",
     "lang": "nl",
-    "orientation": "any",
+    "orientation": "portrait-primary",
     "theme_color": "#6aa84f",
     "icons": [
         {

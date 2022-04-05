@@ -9,12 +9,22 @@ let port = process.env.PORT || 5555
 
 const app = express()
 
+const setCache = (req, res, next) => {
+  const period = 183 * 24 * 60 * 60 
+
+  if (req.method == 'GET') {
+    res.set('Cache-control', `public, max-age=${period}`)
+  } else {
+    res.set('Cache-control', `no-store`)
+  }
+  next()
+}
 
 //Initialise app
 app
+  .use(setCache)
   .use(express.static('public'))
   .use(compression())
-  .use(setCache)
   .set('view engine', 'pug')
   .set('views', './server/views')
   .use(bodyParser.urlencoded({ extended: true }))
@@ -47,14 +57,3 @@ app
 app.listen(port, () => {
   console.log('Server started at port ' + port);
 });
-
-const setCache = (req, res, next) => {
-  const period = 183 * 24 * 60 * 60 
-
-  if (req.method == 'GET') {
-    res.set('Cache-control', `public, max-age=${period}`)
-  } else {
-    res.set('Cache-control', `no-store`)
-  }
-  next()
-}
