@@ -16,13 +16,19 @@ The application let's you scan the barcode of a product. It uses the barcode sca
 
 <img src="./docs/assets/activitydiagram.png" alt="Activity diagram" width=50% height=50%>
 
-
 ## Running the app
 
-### Used technology
+### API's
 
 The application uses the pug rendering engine for displaying the content and express to setup a server.
 Besides that it uses [the barcode detection API](https://developer.mozilla.org/en-US/docs/Web/API/Barcode_Detection_API) and the [OpenFoodfacts API](https://world.openfoodfacts.org/)
+
+### Tech stack
+
+- Node.js
+- Express
+- Pug
+- Compression
 
 ### Installation
 
@@ -50,6 +56,13 @@ Start the server with `npm run ndmStart`, you can view it by going to `localhost
 1. npm run ndmStart
 2. open your browser of choice and go to localhost:5555
 ```
+
+## Performance
+
+### Lighthouse performance
+
+<img src="./docs/assets/performance.png" alt="Activity diagram" width=50% height=50%>
+<img src="./docs/assets/loadingtimes.png" alt="Activity diagram" width=50% height=50%>
 
 ## Author
 
