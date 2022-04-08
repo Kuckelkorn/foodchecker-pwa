@@ -70,6 +70,8 @@ Start the server with `npm run ndmStart`, you can view it by going to `localhost
 2. open your browser of choice and go to localhost:5555
 ```
 
+When viewing the site, make sure the viewport is set to a mobile device otherwise there might be issues with the CSS
+
 ## 🎖 Performance
 
 ### Lighthouse performance
