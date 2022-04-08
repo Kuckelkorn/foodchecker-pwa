@@ -8,11 +8,14 @@ The application let's you scan the barcode of a product. It uses the barcode sca
 
 ## Screenshots
 
-![Homescreen](./docs/assets/homescreen.png)![Live video feed](./docs/assets/camera.png)![Product details](./docs/assets/product.png)
+<img src="./docs/assets/homescreen.png" alt="Homescreen" width=33% height=33%>
+<img src="./docs/assets/camera.png" alt="Camera" width=33% height=33%>
+<img src="./docs/assets/product.png" alt="Product" width=33% height=33%>
 
 ## Activity Diagram
 
-![Activity Diagram](./docs/assets/activitydiagram.png)
+<img src="./docs/assets/activitydiagram.png" alt="Activity diagram" width=50% height=50%>
+
 
 ## Running the app
 
