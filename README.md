@@ -8,9 +8,7 @@ The application let's you scan the barcode of a product. It uses the barcode sca
 
 ### Screenshots
 
-<img src="./docs/assets/homescreen.png" alt="Homescreen" width=33% height=33%>
-<img src="./docs/assets/camera.png" alt="Camera" width=33% height=33%>
-<img src="./docs/assets/product.png" alt="Product" width=33% height=33%>
+<img src="./docs/assets/homescreen.png" alt="Homescreen" width=33% height=33%><img src="./docs/assets/camera.png" alt="Camera" width=33% height=33%><img src="./docs/assets/product.png" alt="Product" width=33% height=33%>
 
 ### Activity Diagram
 
